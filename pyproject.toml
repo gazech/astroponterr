@@ -1,0 +1,36 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools.packages.find]
+where = ["src"]  
+
+[tool.poetry]
+name = "astroponterr"
+version = "0.0.0"
+authors = ["Huntington Gazecki <gazecki.hunt@gmail.com>"]
+description = "digital sextant"
+readme = "readme.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+
+[tool.poetry.group.plot]
+optional = true 
+
+[tool.poetry.group.plot.dependencies]
+matplotlib = "^3.8.3"
+seaborn = "^0.13.2"
+pyqt6 = "^6.6.1"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.22.1"
+ipdb = "^0.13.13"
+black = "^24.2.0"
+pytest = "^8.0.2"
+
