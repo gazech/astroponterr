@@ -17,6 +17,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.11"
 numpy = "^1.26.4"
+poetry-plugin-export = "^1.8.0"
 
 [tool.poetry.group.plot]
 optional = true
@@ -39,4 +40,7 @@ pre-commit = "^3.7.1"
 
 [tool.black]
 line-length = 120
-include = "./src"
+exclude = ".legacy"
+
+[tool.flake8]
+exclude = ".legacy"

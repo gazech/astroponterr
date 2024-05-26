@@ -61,7 +61,7 @@ class Distance(UnitBase, Enum):
     DEFAULT = METERS
 
 
-class CompositeUnit(composition, *units):
+class CompositeUnit(UnitBase):
     # TODO
-    def __init__(self) -> None:
+    def __init__(self, composition) -> None:
         pass

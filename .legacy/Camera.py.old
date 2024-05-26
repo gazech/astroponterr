@@ -2,8 +2,8 @@
 Class for star camera
 """
 
-import numpy as np 
-from Quaternion import Quat 
+import numpy as np
+from Quaternion import Quat
 
 class Camera(object):
 
@@ -18,7 +18,7 @@ class Camera(object):
                     res  = None  \
                 ):
 
-        self.position = np.array([lat,lon,alt]) 
+        self.position = np.array([lat,lon,alt])
         self.attitude = Quat(equatorial=[ra,dec,roll])
 
     def print_position(self):

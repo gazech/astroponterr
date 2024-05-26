@@ -2,11 +2,16 @@ repos:
 -   repo: https://github.com/psf/black
     rev: 24.4.2
     hooks:
-    - id: black
+    -   id: black
+        verbose: true
 -   repo: https://github.com/pycqa/flake8
     rev: 7.0.0
     hooks:
-    - id: flake8
+    -   id: flake8
+        exclude: .legacy
+        verbose: true
+        args: ["--extend-ignore","F401","--max-line-length","120"]
+
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
@@ -14,7 +19,10 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
-
-hooks:
--   id: poetry-export
-    args: ["--dev", "-f", "requirements.txt", "-o", "requirements.txt"]
+-   repo: https://github.com/python-poetry/poetry
+    rev: 1.8.3
+    hooks:
+    -   id: poetry-check
+    -   id: poetry-lock
+    -   id: poetry-install
+        verbose: true
