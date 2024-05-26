@@ -9,6 +9,7 @@ from util.enums import ReferenceFrame
 from sensor import Camera
 from spatiotemporal import Position, Attitude
 
+
 @dataclass
 class Observation(object):
 
@@ -17,4 +18,3 @@ class Observation(object):
     attitude: Attitude
     referenceFrame: ReferenceFrame
     cameraData: Camera
-    

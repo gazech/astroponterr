@@ -34,3 +34,6 @@ ipdb = "^0.13.13"
 black = "^24.2.0"
 pytest = "^8.0.2"
 
+[tool.black]
+line-length = 120
+

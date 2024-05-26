@@ -3,49 +3,57 @@
 import numpy as np
 from collections import namedtuple
 
-Vector2D = namedtuple('Vector2D',['x','y','units'])
+Vector2D = namedtuple("Vector2D", ["x", "y", "units"])
+
 
 class Camera(object):
-    
+
     def __init__(self):
-        self._fov = Vector2D(None,None,)
-        self._pixPitch = Vector2D
-        self._pixDim = Vector2D
+        self._fov = Vector2D
+        self._pix_pitch = Vector2D
+        self._pix_dimensions = Vector2D
+        self._exp_time = None
+        self._frame_rate = None
+        self._fpa_temp = None
         return
-    
+
     def __repr__(self):
         return
-    
+
     @property
-    def fieldOfView(self):
+    def field_of_view(self):
         """Degrees"""
         return
-    
+
     @property
-    def pixelPitch(self):
+    def pixel_pitch(self):
         """Degress per pixel"""
         return
-    
+
     @property
-    def pixelCount(self):
+    def pixel_dimensions(self):
         """Pixels"""
         return
-    
+
     @property
-    def exposureTime(self):
+    def exposure_time(self):
         """configured exposure time"""
         return
-    
+
     @property
-    def temperature(self):
+    def frame_rate(self):
+        """camera frame rate"""
+        return
+
+    @property
+    def fpa_temperature(self):
         """FPA temp"""
         return
-    
+
     def calibrate(self):
         """dark/bias/flat"""
         return
-    
+
     def capture(self):
         """trigger camera"""
         return
-
