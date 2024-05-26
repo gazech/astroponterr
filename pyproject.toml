@@ -39,4 +39,5 @@ pre-commit = "^3.7.1"
 
 [tool.black]
 line-length = 120
+include = "./src"
 
