@@ -33,6 +33,7 @@ optional = true
 ipython = "^8.22.1"
 ipdb = "^0.13.13"
 black = "^24.2.0"
+flake8 = "^7.0.0"
 pytest = "^8.0.2"
 pre-commit = "^3.7.1"
 
