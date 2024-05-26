@@ -12,6 +12,7 @@ authors = ["Huntington Gazecki <gazecki.hunt@gmail.com>"]
 description = "digital sextant"
 readme = "readme.md"
 package-mode = false
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -33,6 +34,7 @@ ipython = "^8.22.1"
 ipdb = "^0.13.13"
 black = "^24.2.0"
 pytest = "^8.0.2"
+pre-commit = "^3.7.1"
 
 [tool.black]
 line-length = 120
