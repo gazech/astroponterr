@@ -13,5 +13,5 @@ class Position(object):
         return
 
     @property
-    def referenceFrame(self):
+    def reference_frame(self):
         return

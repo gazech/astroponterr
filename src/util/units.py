@@ -9,19 +9,19 @@ from dataclasses import dataclass
 @dataclass
 class UnitBase:
 
-    unitName: str
-    toDefaultUnit: types.LambdaType
-    fromDefaultUnit: types.LambdaType
+    unit_name: str
+    to_default_unit: types.LambdaType
+    from_default_unit: types.LambdaType
 
     @classmethod
-    def getDefaultUnit(self):
+    def get_default_unit(self):
         return self.DEFAULT
 
-    def isDefaultUnit(self):
+    def is_default_unit(self):
         return self is self.DEFAULT
 
     def convert(self, value: float, toUnit: Enum) -> float:
-        return toUnit.fromDefaultUnit(self.toDefaultUnit(value))
+        return toUnit.from_default_unit(self.to_default_unit(value))
 
 
 class Angle(UnitBase, Enum):

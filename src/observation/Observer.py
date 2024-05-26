@@ -7,15 +7,15 @@ from Observation import Observation
 class Observer(object):
 
     def __init__(self):
-        self.obsDict = {}
+        self.obs_dict = {}
         self.id = uuid4()
         return
 
     def __repr__(self):
-        return f"I am an observer with ID {self.id:s}; {len(self.obsDict)} observations total"
+        return f"I am an observer with ID {self.id:s}; {len(self.obs_dict)} observations total"
 
-    def getObserverID(self):
-        return f"My super special observer ID is {self.observerID:s}"
+    def get_observer_id(self):
+        return f"My super special observer ID is {self.observer_id:s}"
 
-    def addObservation(self, obs: Observation):
-        return self.obsDict.update({uuid4(): obs})
+    def add_observation(self, obs: Observation):
+        return self.obs_dict.update({uuid4(): obs})

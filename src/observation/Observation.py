@@ -13,8 +13,8 @@ from spatiotemporal import Position, Attitude
 @dataclass
 class Observation(object):
 
-    timeOfObservation: datetime
+    time_of_observation: datetime
     location: Position
     attitude: Attitude
-    referenceFrame: ReferenceFrame
-    cameraData: Camera
+    reference_frame: ReferenceFrame
+    camera_data: Camera
