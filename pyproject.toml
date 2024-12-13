@@ -11,7 +11,7 @@ version = "0.0.0"
 authors = ["Huntington Gazecki <gazecki.hunt@gmail.com>"]
 description = "digital sextant"
 readme = "readme.md"
-package-mode = false
+package-mode = true
 license = "MIT"
 
 [tool.poetry.dependencies]
