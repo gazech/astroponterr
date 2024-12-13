@@ -1,9 +1,15 @@
 """Attitude Class"""
 
 import numpy as np
+from dataclasses import dataclass
 from collections import namedtuple
 
 Vector2D = namedtuple("Vector2D", ["x", "y", "units"])
+
+
+@dataclass
+class Collection(object):
+    pass
 
 
 class Camera(object):
@@ -27,7 +33,7 @@ class Camera(object):
 
     @property
     def pixel_pitch(self):
-        """Degress per pixel"""
+        """m per pixel"""
         return
 
     @property
