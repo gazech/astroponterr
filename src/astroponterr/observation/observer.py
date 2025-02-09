@@ -1,8 +1,8 @@
 """Observer Class"""
 
 from uuid import uuid4
+
 from astroponterr.observation.observation import Observation
-from astroponterr.spatiotemporal.state import State
 
 
 class Observer(object):

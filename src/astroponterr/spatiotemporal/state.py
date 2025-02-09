@@ -1,8 +1,8 @@
 """Position/Attitude Class"""
 
 import numpy as np
-from util.enums import ReferenceFrame
 from scipy.spatial.transform import Rotation
+from util.enums import ReferenceFrame
 
 
 class State(object):

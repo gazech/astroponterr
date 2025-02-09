@@ -4,13 +4,9 @@
 #
 # Master Script
 
-from ephem import *
-from math import degrees as rad2deg
 from sys import exit
 
-import math
-import datetime
-import numpy
+from ephem import *
 
 # ----------- #
 

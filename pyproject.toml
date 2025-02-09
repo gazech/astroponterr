@@ -1,50 +1,43 @@
 [build-system]
-requires = ["poetry-core","pre-commit"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.poetry]
+[project]
 name = "astroponterr"
 version = "0.0.0"
-authors = ["Huntington Gazecki <gazecki.hunt@gmail.com>"]
+authors = [
+    {name = "Huntington Gazecki", email = 'gazecki.hunt@gmail.com'}
+]
+maintainers = [
+    {name = "Huntington Gazecki", email = 'gazecki.hunt@gmail.com'}
+]
 description = "digital sextant"
-readme = "readme.md"
-package-mode = true
-license = "MIT"
+readme = {file = "readme.md", content-type = "text/markdown"}
+license = "MIT AND (Apache-2.0 OR BSD-2-Clause)" 
+requires-python = ">= 3.13"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-numpy = "^1.26.4"
-poetry-plugin-export = "^1.8.0"
-scipy = "^1.14.0"
-skyfield = "^1.49"
-astropy = "^6.1.1"
-opencv-python = "^4.10.0.84"
+dependencies = [
+    "numpy",
+    "scipy",
+    "opencv-python",
+    "polars",
+]
 
-[tool.poetry.group.plot]
-optional = true
 
-[tool.poetry.group.plot.dependencies]
-matplotlib = "^3.8.3"
-seaborn = "^0.13.2"
-pyqt6 = "^6.6.1"
-
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-ipython = "^8.22.1"
-ipdb = "^0.13.13"
-black = "^24.2.0"
-flake8 = "^7.0.0"
-pytest = "^8.0.2"
-pre-commit = "^3.7.1"
-
-[tool.black]
-line-length = 120
-exclude = ".legacy"
-
-[tool.flake8]
-exclude = ".legacy"
+[project.optional-dependencies]
+all = [
+    "astroponterr[dev]",
+    "astroponterr[gui]",
+]
+dev = [
+    "pre-commit",
+    "ruff",
+    "uv",
+    "ipython",
+    "ipdb",
+    "jupyter"
+]
+gui = [
+    "matplotlib",
+    "seaborn"
+]

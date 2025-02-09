@@ -1,9 +1,10 @@
 # TODO
 
-from enum import Enum
-import numpy as np
 import types
 from dataclasses import dataclass
+from enum import Enum
+
+import numpy as np
 
 
 @dataclass

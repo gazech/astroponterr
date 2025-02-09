@@ -1,8 +1,7 @@
 """Attitude Class"""
 
-import numpy as np
-from dataclasses import dataclass
 from collections import namedtuple
+from dataclasses import dataclass
 
 Vector2D = namedtuple("Vector2D", ["x", "y", "units"])
 

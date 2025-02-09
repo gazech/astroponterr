@@ -2,13 +2,9 @@
 testbed for pointing vectors to latlon
 """
 
-from ephem import *
-from math import degrees as rad2deg
 from sys import *
 
-import math
-import datetime
-import numpy
+from ephem import *
 
 # ----------- #
 
