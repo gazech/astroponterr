@@ -6,7 +6,6 @@ from util.enums import ReferenceFrame
 
 
 class State(object):
-
     def __init__(
         self,
         rf: ReferenceFrame = ReferenceFrame.UNDETERMINED,

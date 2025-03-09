@@ -12,7 +12,6 @@ class Collection(object):
 
 
 class Camera(object):
-
     def __init__(self):
         self._fov = Vector2D
         self._pix_pitch = Vector2D

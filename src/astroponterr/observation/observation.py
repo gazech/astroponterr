@@ -11,7 +11,6 @@ from astroponterr.spatiotemporal.state import State
 
 @dataclass
 class Observation(object):
-
     time_of_observation: datetime
     state: State
     camera_data: Collection

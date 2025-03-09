@@ -9,7 +9,6 @@ import numpy as np
 
 @dataclass
 class UnitBase:
-
     unit_name: str
     to_default_unit: types.LambdaType
     from_default_unit: types.LambdaType
@@ -35,7 +34,6 @@ class Angle(UnitBase, Enum):
 
 
 class Temperature(UnitBase, Enum):
-
     CELSIUS = "°C", lambda u: u, lambda u: u
     KELVIN = "K", lambda u: u - 273.15, lambda u: u + 273.15
 
@@ -46,7 +44,6 @@ class Temperature(UnitBase, Enum):
 
 
 class Distance(UnitBase, Enum):
-
     METERS = "m", lambda u: u, lambda u: u
     NANOMETERS = "nm", lambda u: u * 1e-9, lambda u: u / 1e-9
     MICROMETERS = "um", lambda u: u * 1e-6, lambda u: u / 1e-6

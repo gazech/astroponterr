@@ -6,7 +6,6 @@ from astroponterr.observation.observation import Observation
 
 
 class Observer(object):
-
     def __init__(self):
         self.obs_dict = {}
         self.id = uuid4()
