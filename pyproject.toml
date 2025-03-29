@@ -21,6 +21,8 @@ dependencies = [
     "scipy",
     "opencv-python",
     "polars",
+    "astropy",
+    # "astrometry.net", # ...not sure how to enforce this
 ]
 
 

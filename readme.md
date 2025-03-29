@@ -1,3 +1,3 @@
 # astroponterr
 
-Requires [poetry](https://python-poetry.org/docs/#installation)
+Requires [astrometry.net](https://github.com/dstndstn/astrometry.net)
