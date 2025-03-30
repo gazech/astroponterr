@@ -19,6 +19,7 @@ requires-python = ">= 3.13"
 dependencies = [
     "numpy",
     "scipy",
+    "skyfield",
     "opencv-python",
     "polars",
     "astropy",

@@ -85,6 +85,7 @@ dependencies = [
     { name = "opencv-python" },
     { name = "polars" },
     { name = "scipy" },
+    { name = "skyfield" },
 ]
 
 [package.optional-dependencies]
@@ -127,6 +128,7 @@ requires-dist = [
     { name = "ruff", marker = "extra == 'dev'" },
     { name = "scipy" },
     { name = "seaborn", marker = "extra == 'gui'" },
+    { name = "skyfield" },
     { name = "uv", marker = "extra == 'dev'" },
 ]
 provides-extras = ["all", "dev", "gui"]
@@ -619,6 +621,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33cef02e048281fec7ecec5f032d4aac52226b/jinja2-3.1.6.tar.gz", hash = "sha256:0137fb05990d35f1275a587e9aee6d56da821fc83491a0fb838183be43f66d6d", size = 245115 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl", hash = "sha256:85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67", size = 134899 },
+]
+
+[[package]]
+name = "jplephem"
+version = "2.22"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/e5/046f96d8699d2961fb71e28a81b25474d83ed54c5c1fb02033acf994b230/jplephem-2.22.tar.gz", hash = "sha256:0d9acc7217b4806feba93e72974ceead5611104bce6789af38d4f27dcf7a592c", size = 43113 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/29/b29df8198777badb21d11a0fdb32b7f3afd765390dd1e8b99c86354489b6/jplephem-2.22-py3-none-any.whl", hash = "sha256:efe4b3590f3eef1a5dfcf7078e8e93803f8ce3276c3306e93bfd20b3536b2c60", size = 47243 },
 ]
 
 [[package]]
@@ -1647,12 +1661,33 @@ wheels = [
 ]
 
 [[package]]
+name = "sgp4"
+version = "2.24"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/10/fa/4251a1cac8a23ccc552ed367ae7fa7439f631022b7db5472ce99f43b49b3/sgp4-2.24.tar.gz", hash = "sha256:5655249f276ea23fbdae9e881ab01d82420285b45dc76d0da4f424e3647f8352", size = 180085 }
+
+[[package]]
 name = "six"
 version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050 },
+]
+
+[[package]]
+name = "skyfield"
+version = "1.52"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "jplephem" },
+    { name = "numpy" },
+    { name = "sgp4" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/73/1c/988de5fe51a71d1256bfe183558652af3fec091c8a6544454eed6314a877/skyfield-1.52.tar.gz", hash = "sha256:3d0d335a81b8db36d4a658636f211fe51122cda43908ec2573a956ec93e91dec", size = 443637 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/13/79/c2d672ea1ea5264098e9ac78ad1415241ec1f02fbed915c739778ed8c971/skyfield-1.52-py3-none-any.whl", hash = "sha256:4203e9d9ffd2b0b8c118522b606c7c0f14509668379e8e88e3641a4d60d3edb4", size = 466910 },
 ]
 
 [[package]]
