@@ -41,5 +41,6 @@ dev = [
 ]
 gui = [
     "matplotlib",
-    "seaborn"
+    "seaborn",
+    #"altair",
 ]
