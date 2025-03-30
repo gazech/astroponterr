@@ -76,26 +76,10 @@ wheels = [
 ]
 
 [[package]]
-name = "astrometry"
-version = "4.3.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "requests" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/a7/82/f7494cd074c90e0feef4d2c25d8ea737c202e035f1f72c96d4d3d35b104d/astrometry-4.3.0.tar.gz", hash = "sha256:54de35b9247471fe7dc6e5b5da2374d627631e9c6229f5d4dcf230a581e9be22", size = 529586 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/f8/e0/54fde453444d920ae25ed44c90f7335c3801515ebac08d2236ff18a79bea/astrometry-4.3.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:a9722582fec0fe63791df89c1c77e63609cbc6262ffd634e7e398687ba9f4f90", size = 631599 },
-    { url = "https://files.pythonhosted.org/packages/b2/7c/8100540eb1fe391ee62afb9ba63d332506f8e05626d6e59e8fd6d7bf98ea/astrometry-4.3.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:8f7efa67e4c630df852ca060489d63056142ea73dcf26686c1890522f1ee9027", size = 529895 },
-    { url = "https://files.pythonhosted.org/packages/08/ff/7570100f2fc8c5bbd3381085f07c4f2095fe3ababa068237cdff5ac7bc1e/astrometry-4.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ecd623b988b074d42ee0be58e1710a4989e4119cb4acba382d9ca35179a6024d", size = 2120093 },
-    { url = "https://files.pythonhosted.org/packages/07/83/263355b60e3795b1668c52148395b7eee42f355f06299667638871eba30f/astrometry-4.3.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:add1911972dbb205635a76c9bfb67984be4fdb656bf6bb79eaeae8012a0a5c08", size = 2085826 },
-]
-
-[[package]]
 name = "astroponterr"
 version = "0.0.0"
 source = { editable = "." }
 dependencies = [
-    { name = "astrometry" },
     { name = "astropy" },
     { name = "numpy" },
     { name = "opencv-python" },
@@ -132,7 +116,6 @@ gui = [
 
 [package.metadata]
 requires-dist = [
-    { name = "astrometry" },
     { name = "astroponterr", extras = ["dev"], marker = "extra == 'all'" },
     { name = "astroponterr", extras = ["gui"], marker = "extra == 'all'" },
     { name = "astropy" },

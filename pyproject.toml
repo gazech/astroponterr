@@ -23,7 +23,7 @@ dependencies = [
     "opencv-python", # needed?
     "polars",
     "astropy",
-    "astrometry", # using python interface for now
+    # "astrometry.net", #how best to pin this?
 ]
 
 
