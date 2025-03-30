@@ -1,23 +1,38 @@
 # TODO
 
 import types
-from dataclasses import dataclass
 from enum import Enum
 
 import numpy as np
 
 
-@dataclass
+class CompositeUnit():
+    # TODO
+    def __init__(self, composition):
+        pass
+
+
+# @dataclass
 class UnitBase:
     unit_name: str
-    to_default_unit: types.LambdaType
+    to_default_unit: types.LambdaType # TODO: do I really want to use lambdas?
     from_default_unit: types.LambdaType
 
-    @classmethod
-    def get_default_unit(self):
+    def __add__(self, other):
+        raise ArithmeticError("Cannot arithmetically add units")
+
+    def __sub__(self, other):
+        raise ArithmeticError("Cannot arithmetically subtract units")
+
+    def __mul__(self, other) -> CompositeUnit:
+        #TODO
+        pass
+
+
+    def get_default_unit(self) -> "UnitBase":
         return self.DEFAULT
 
-    def is_default_unit(self):
+    def is_default_unit(self) -> bool:
         return self is self.DEFAULT
 
     def convert_to(self, value: float, to_unit: Enum) -> float:
@@ -57,9 +72,3 @@ class Distance(UnitBase, Enum):
     MILES = "mi", lambda u: u * 1609.344, lambda u: u / 1609.344
 
     DEFAULT = METERS
-
-
-class CompositeUnit(UnitBase):
-    # TODO
-    def __init__(self, composition) -> None:
-        pass

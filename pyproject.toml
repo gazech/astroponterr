@@ -20,10 +20,10 @@ dependencies = [
     "numpy",
     "scipy",
     "skyfield",
-    "opencv-python",
+    "opencv-python", # needed?
     "polars",
     "astropy",
-    # "astrometry.net", # ...not sure how to enforce this
+    "astrometry", # using python interface for now
 ]
 
 
@@ -43,5 +43,6 @@ dev = [
 gui = [
     "matplotlib",
     "seaborn",
+    "pyqt6",
     #"altair",
 ]
