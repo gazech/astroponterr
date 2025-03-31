@@ -7,11 +7,11 @@ class ColorFormatter(logging.Formatter):
 
     # ANSI color codes
     COLORS: ClassVar[Dict[int, str]] = {
-        logging.DEBUG:    "\033[2m", # de-emphasized
-        logging.INFO:     "\033[0m", # Normal
-        logging.WARNING:  "\033[7m", # Inverted
-        logging.ERROR:    "\033[91m", # Red
-        logging.CRITICAL: "\033[91;7m", # Red, inverted
+        logging.DEBUG: "\033[2m",  # de-emphasized
+        logging.INFO: "\033[0m",  # Normal
+        logging.WARNING: "\033[7m",  # Inverted
+        logging.ERROR: "\033[91m",  # Red
+        logging.CRITICAL: "\033[91;7m",  # Red, inverted
     }
 
     RESET: ClassVar[str] = "\033[0m"
@@ -20,7 +20,8 @@ class ColorFormatter(logging.Formatter):
         """Initialize the formatter with level-specific formats"""
         super().__init__()
         self.formatting_strings: Dict[int, str] = {
-            lvl: f"{self.COLORS[lvl]}%(asctime)s : \033[1m%(levelname)8s\033[0m{self.COLORS[lvl]} | %(name)s:%(funcName)s:%(lineno)d > %(message)s{self.RESET}" for lvl in self.COLORS
+            lvl: f"{self.COLORS[lvl]}%(asctime)s : \033[1m%(levelname)8s\033[0m{self.COLORS[lvl]} | %(name)s:%(funcName)s:%(lineno)d > %(message)s{self.RESET}"
+            for lvl in self.COLORS
         }
         self.formatters: Dict[int, logging.Formatter] = {
             lvl: logging.Formatter(f"{self.formatting_strings[lvl]}") for lvl in self.COLORS

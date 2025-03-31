@@ -1,6 +1,5 @@
 # TODO: interface for astrometry.net (or other solver)
 
-import tempfile
 from abc import ABC, abstractmethod
 from enum import StrEnum
 from pathlib import Path
@@ -17,10 +16,12 @@ logger = Scribe(__name__)
 PixelType = TypeVar("PixelType", bound=np.generic)
 ImageArrayType = Annotated[np.typing.NDArray[PixelType], Literal["N", "N"]]
 
+
 class SolverType(StrEnum):
     """
     Enum for the different solver types.
     """
+
     ASTROMETRY_NET = "astrometry.net"
 
 
@@ -30,6 +31,7 @@ class Solver(ABC):
     """
 
     _solution = None
+
     @property
     def solution(self):
         return self._solution
@@ -39,6 +41,7 @@ class Solver(ABC):
         raise AttributeError(f"Solution for {type(self)} is read-only.")
 
     _memory_mapping = True
+
     @property
     def use_memmory_mapping(self):
         return self._memory_mapping
@@ -66,7 +69,7 @@ class Solver(ABC):
         """
         Solve the FITS image using the specified solver.
         """
-        with fits.open(fits_path,mode="readonly",memmap=self._memory_mapping) as hdul:
+        with fits.open(fits_path, mode="readonly", memmap=self._memory_mapping) as hdul:
             image_data = hdul[0].data
         self._solve(image=image_data)
 
@@ -87,7 +90,6 @@ class AstrometrySolver(Solver):
         self._cache_dir = None
 
     def _solve(self, image: ImageArrayType):
-
         logger.info(f"Using cache directory: {self._cache_dir}")
 
         # indexer = astrometry.series_4100.index_files(
@@ -100,9 +102,8 @@ class AstrometrySolver(Solver):
             scales={6},
         )
 
-        with astrometry.Solver(indexer)as solver:
-
-            #FIXME tmp
+        with astrometry.Solver(indexer) as solver:
+            # FIXME tmp
             stars = [
                 [388.9140568247906, 656.5003281719216],
                 [732.9210858972549, 473.66395545775106],
@@ -126,10 +127,8 @@ class AstrometrySolver(Solver):
                 solution_parameters=astrometry.SolutionParameters(solve_id="testy"),
             )
 
-            # pass 
-
+            # pass
 
     @property
     def solver(self) -> SolverType:
         return self._solver
-

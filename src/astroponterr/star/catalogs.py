@@ -14,6 +14,7 @@ logger = Scribe(__name__)
 
 DEFAULT_CACHE_PREFIX = "astrometry_cache/"
 
+
 def _sanitize_path(path: str | Path) -> Path:
     """
     Sanitizes the path to a Path object.
@@ -26,13 +27,13 @@ def _sanitize_path(path: str | Path) -> Path:
         raise ValueError(f"Path must be a string or Path object, not {type(path)}")
     return path
 
+
 class CatalogCacher:
     """
     Caches the astrometry.net catalogs for use in solving.
     """
 
     def __init__(self, cache_path: Path | None = None):
-
         self._cache_path = None
         input_cache_path = _sanitize_path(cache_path)
 
@@ -59,11 +60,12 @@ class CatalogCacher:
 
     @cache_path.setter
     def cache_path(self, path: Path):
-
         self._cache_path = _sanitize_path(path)
 
         if not self._cache_path.exists():
-            logger.warning(f"Provided cache directory does not exist: {self._cache_path.resolve()}. Consider calling Path.mkdir().")
+            logger.warning(
+                f"Provided cache directory does not exist: {self._cache_path.resolve()}. Consider calling Path.mkdir()."
+            )
 
         logger.info(f"Using cache directory at {self._cache_path.resolve()}")
 
@@ -73,7 +75,6 @@ class CatalogCacher:
             logger.info(f"Deleting cache directory at {self._cache_path.resolve()}")
             self._cache_path.rmdir()
             self._cache_path = None
-
 
 
 def get_wide_scale_catalogs() -> list[astrometry.Series]:

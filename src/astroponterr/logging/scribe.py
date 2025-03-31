@@ -19,10 +19,11 @@ class Scribe(logging.Logger):
         for level in (logging.DEBUG, logging.INFO, logging.WARNING, logging.ERROR, logging.CRITICAL):
             self.log(level, f"This is a test message at level {level} with value {logging.getLevelName(level)}")
 
+
 def main():
     logger = Scribe("my_logger", logging.DEBUG)
     logger.test_levels()  # Logs a test message to the console
 
+
 if __name__ == "__main__":
     main()
-

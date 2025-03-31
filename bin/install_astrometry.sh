@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 # echo "Installing Astrometry.net 0.94"
 # wget -nc https://github.com/dstndstn/astrometry.net/releases/download/0.94/astrometry.net-0.94.tar.gz
 # tar -xzvf astrometry.net-0.94.tar.gz

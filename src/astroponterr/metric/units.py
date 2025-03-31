@@ -7,7 +7,7 @@ from enum import Enum
 import numpy as np
 
 
-class CompositeUnit():
+class CompositeUnit:
     # TODO
     def __init__(self, composition):
         pass
@@ -16,7 +16,7 @@ class CompositeUnit():
 # @dataclass
 class UnitBase:
     unit_name: str
-    to_default_unit: types.LambdaType # TODO: do I really want to use lambdas?
+    to_default_unit: types.LambdaType  # TODO: do I really want to use lambdas?
     from_default_unit: types.LambdaType
 
     def __add__(self, other):
@@ -26,9 +26,8 @@ class UnitBase:
         raise ArithmeticError("Cannot arithmetically subtract units")
 
     def __mul__(self, other) -> CompositeUnit:
-        #TODO
+        # TODO
         pass
-
 
     def get_default_unit(self) -> "UnitBase":
         return self.DEFAULT
