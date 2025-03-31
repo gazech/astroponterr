@@ -17,32 +17,32 @@ license = "MIT AND (Apache-2.0 OR BSD-2-Clause)"
 requires-python = ">= 3.13"
 
 dependencies = [
-    "numpy",
-    "scipy",
-    "skyfield",
-    "opencv-python", # needed?
-    "polars",
-    "astropy",
     # "astrometry.net", #how best to pin this?
+    "astrometry>=4.3.0",
+    "astropy>=7.0.1",
+    "numpy>=2.2.4",
+    "opencv-python>=4.11.0.86",
+    "polars>=1.26.0",
+    "scipy>=1.15.2",
+    "skyfield>=1.52",
 ]
 
 
 [project.optional-dependencies]
-all = [
-    "astroponterr[dev]",
-    "astroponterr[gui]",
-]
-dev = [
-    "pre-commit",
-    "ruff",
-    "uv",
-    "ipython",
-    "ipdb",
-    "jupyter"
-]
 gui = [
-    "matplotlib",
-    "seaborn",
-    "pyqt6",
-    #"altair",
+    "matplotlib>=3.10.1",
+    "pyqt6>=6.8.1",
+]
+nb = [
+    "jupyter>=1.1.1",
+]
+
+
+[dependency-groups]
+dev = [
+    "ipdb>=0.13.13",
+    "ipython>=9.0.2",
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.2",
+    "uv>=0.6.11",
 ]

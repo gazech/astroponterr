@@ -1,4 +1,5 @@
 # TODO
+# See: astropy.Quantity
 
 import types
 from enum import Enum
