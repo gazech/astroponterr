@@ -12,7 +12,7 @@ from astroponterr.logging.scribe import Scribe
 logger = Scribe(__name__)
 
 
-DEFAULT_CACHE_PREFIX = "astrometry_cache/"
+DEFAULT_CACHE_PREFIX = Path.home() / ".astroponterr_cache"
 
 
 def _sanitize_path(path: str | Path) -> Path:
@@ -73,7 +73,7 @@ class CatalogCacher:
     def cache_path(self):
         if self.cache_path and self._cache_path.exists():
             logger.info(f"Deleting cache directory at {self._cache_path.resolve()}")
-            self._cache_path.rmdir()
+            self._cache_path.rmdir()  # FIXME: only deletes if directory is empty
             self._cache_path = None
 
 
