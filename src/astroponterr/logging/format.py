@@ -2,6 +2,14 @@ import logging
 from typing import ClassVar, Dict
 
 
+class FormatterBaseClass(logging.Formatter):
+    pass
+
+
+class BasicFormatter(logging.Formatter):
+    pass
+
+
 class ColorFormatter(logging.Formatter):
     """Custom formatter that applies different formats based on log level"""
 
