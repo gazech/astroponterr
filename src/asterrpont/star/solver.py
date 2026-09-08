@@ -9,7 +9,7 @@ import astrometry
 import numpy as np
 from astropy.io import fits
 
-from astroponterr.logging.scribe import Scribe
+from asterrpont.logging.scribe import Scribe
 
 logger = Scribe(__name__)
 

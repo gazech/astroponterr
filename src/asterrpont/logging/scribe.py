@@ -1,6 +1,6 @@
 import logging
 
-from astroponterr.logging.format import ColorFormatter
+from asterrpont.logging.format import ColorFormatter
 
 
 class Scribe(logging.Logger):

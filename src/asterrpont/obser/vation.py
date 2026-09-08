@@ -5,8 +5,8 @@
 from dataclasses import dataclass
 from datetime import datetime
 
-from astroponterr.sensor.camera import Collection
-from astroponterr.spatiotemporal.state import State
+from asterrpont.sensor.camera import Collection
+from asterrpont.spatiotemporal.state import State
 
 
 @dataclass

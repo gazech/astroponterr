@@ -6,7 +6,7 @@ from astropy.time import Time
 from astropy.units import Quantity, meter, second
 from scipy.spatial.transform import Rotation
 
-from astroponterr.spatiotemporal.reference_frame import ReferenceFrameType
+from asterrpont.spatiotemporal.reference_frame import ReferenceFrameType
 
 
 @dataclasses.dataclass

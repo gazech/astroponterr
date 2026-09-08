@@ -2,7 +2,7 @@
 
 from uuid import uuid4
 
-from astroponterr.observation.observation import Observation
+from asterrpont.observation.observation import Observation
 
 
 class Observer(object):

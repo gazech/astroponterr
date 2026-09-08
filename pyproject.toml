@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "astroponterr"
+name = "asterrpont"
 version = "0.0.0"
 authors = [
     {name = "Huntington Gazecki", email = 'gazecki.hunt@gmail.com'}
@@ -20,10 +20,10 @@ dependencies = [
     # "astrometry.net", #how best to pin this?
     "astrometry>=4.3.0",
     "astropy>=7.0.1",
-    "numpy>=2.2.4",
+    "numpy", #>=2.2.4",
     "opencv-python>=4.11.0.86",
     "polars>=1.26.0",
-    "scipy>=1.15.2",
+    "scipy", #>=1.15.2",
     "skyfield>=1.52",
     #"starcatalogquery>=1.1.5",
 ]
@@ -43,6 +43,7 @@ nb = [
 dev = [
     "ipython>=9.0.2",
     "pre-commit>=4.2.0",
+    "pytest>=9.1.1",
     "ruff>=0.11.2",
     "uv>=0.6.11",
 ]

@@ -7,12 +7,12 @@ from pathlib import Path
 
 import astrometry
 
-from astroponterr.logging.scribe import Scribe
+from asterrpont.logging.scribe import Scribe
 
 logger = Scribe(__name__)
 
 
-DEFAULT_CACHE_PREFIX = Path.home() / ".astroponterr_cache"
+DEFAULT_CACHE_PREFIX = Path.home() / ".asterrpont_cache"
 
 
 def _sanitize_path(path: str | Path) -> Path:
